@@ -17,6 +17,7 @@
 		2F5DCB581D8596D5003C91BB /* PTPOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB511D8596D5003C91BB /* PTPOperation.swift */; };
 		2F5DCB591D8596D5003C91BB /* PTPOperationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB521D8596D5003C91BB /* PTPOperationRequest.swift */; };
 		2F5DCB5A1D8596D5003C91BB /* PTPOperationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB531D8596D5003C91BB /* PTPOperationResponse.swift */; };
+		2F5DCB5C1D85ADDF003C91BB /* PTPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB5B1D85ADDF003C91BB /* PTPExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		2F5DCB511D8596D5003C91BB /* PTPOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPOperation.swift; sourceTree = "<group>"; };
 		2F5DCB521D8596D5003C91BB /* PTPOperationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPOperationRequest.swift; sourceTree = "<group>"; };
 		2F5DCB531D8596D5003C91BB /* PTPOperationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPOperationResponse.swift; sourceTree = "<group>"; };
+		2F5DCB5B1D85ADDF003C91BB /* PTPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				2F5DCB4D1D8596D5003C91BB /* PTP.swift */,
+				2F5DCB5B1D85ADDF003C91BB /* PTPExtensions.swift */,
 				2F5DCB4E1D8596D5003C91BB /* PTPDataSet.swift */,
 				2F5DCB4F1D8596D5003C91BB /* PTPDescriptor.swift */,
 				2F5DCB501D8596D5003C91BB /* PTPEvent.swift */,
@@ -234,6 +237,7 @@
 				2F5DCB581D8596D5003C91BB /* PTPOperation.swift in Sources */,
 				2F5DCB591D8596D5003C91BB /* PTPOperationRequest.swift in Sources */,
 				2F5DCB571D8596D5003C91BB /* PTPEvent.swift in Sources */,
+				2F5DCB5C1D85ADDF003C91BB /* PTPExtensions.swift in Sources */,
 				2F5DCB5A1D8596D5003C91BB /* PTPOperationResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

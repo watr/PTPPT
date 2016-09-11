@@ -52,6 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, ICDeviceBrowserDelegate, ICC
         print("device did become ready")
         
         if let cameraDevice = device as? ICCameraDevice{
+            print("can accept ptp commands?: \(cameraDevice.canAcceptPTPCommands)")
             let operation = PTPOperation(code: PTPOperationCode.getDeviceInfo.rawValue, parameters: [])
             let request = PTPOperationRequest(operation: operation, outData: Data(), completionHandler: { (_, inData, response, error) in
                 if response.container.code == PTPResponseCode.ok.rawValue {
