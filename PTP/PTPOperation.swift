@@ -43,13 +43,7 @@ struct PTPOperation {
     init(code: PTPCode, parameters: [PTPParameter]) {
         self.container = PTPContainer(code: code, parameters: parameters)
     }
-    
-    var code: PTPOperationCode? {
-        get {
-            return PTPOperationCode(rawValue: self.container.code)
-        }
-    }
-    
+        
     var commandBuffer: Data {
         let length = ((MemoryLayout<PTPContainerDataLength>.size + MemoryLayout<PTPContainerTypeRawValue>.size + MemoryLayout<PTPCode>.size + MemoryLayout<PTPTransactionID>.size) + (MemoryLayout<PTPParameter>.size * Int(self.container.numberOfParameters)))
         var bytes = [UInt8](repeating: 0, count: length)

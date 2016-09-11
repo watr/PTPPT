@@ -39,13 +39,7 @@ enum PTPResponseCode: PTPCode {
 
 struct PTPOperationResponse {
     let container: PTPContainer
-    
-    var code: PTPResponseCode? {
-        get {
-            return PTPResponseCode(rawValue: self.container.code)
-        }
-    }
-    
+        
     init?(data: Data) {
         guard let container = PTPContainer(type: PTPContainerType.response.rawValue, data: data) else {
             return nil

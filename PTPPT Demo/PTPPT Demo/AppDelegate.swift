@@ -54,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, ICDeviceBrowserDelegate, ICC
         if let cameraDevice = device as? ICCameraDevice{
             let operation = PTPOperation(code: PTPOperationCode.getDeviceInfo.rawValue, parameters: [])
             let request = PTPOperationRequest(operation: operation, outData: Data(), completionHandler: { (_, inData, response, error) in
-                if response.code == .ok {
+                if response.container.code == PTPResponseCode.ok.rawValue {
                     print(GetDeviceInfoDataSet(data: inData)!)
                 }
             })

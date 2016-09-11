@@ -25,12 +25,6 @@ enum PTPEventCode: PTPCode {
 struct PTPEvent {
     let container: PTPContainer
     
-    var eventCode: PTPEventCode? {
-        get {
-            return PTPEventCode(rawValue: self.container.code)
-        }
-    }
-    
     init?(data: Data) {
         guard let container = PTPContainer(type: PTPContainerType.event.rawValue, data: data) else {
             return nil
