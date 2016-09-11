@@ -1,19 +1,19 @@
 
 import Foundation
 
-protocol PTPDataSet {
+public protocol PTPDataSet {
     init?(data: Data)
 }
 
-extension Data {
-    func ptpStringCapacity(from offset: Int) -> Int {
+public extension Data {
+    public func ptpStringCapacity(from offset: Int) -> Int {
         let countCapacity = MemoryLayout<PTPStringCharacterCount>.size
         let count: PTPStringCharacterCount = self.subdata(in: offset..<(offset + countCapacity)).withUnsafeBytes({$0.pointee})
         let capacity: Int = MemoryLayout<PTPStringCharacterCount>.size + (Int(count) * MemoryLayout<PTPStringCharacter>.size)
         return capacity
     }
     
-    func ptpString(from offset: Int = 0) -> String {
+    public func ptpString(from offset: Int = 0) -> String {
         let data = self.subdata(in: offset..<(offset + self.ptpStringCapacity(from: offset)))
         let count: PTPStringCharacterCount = data.withUnsafeBytes({$0.pointee})
         let characterCapacity = MemoryLayout<PTPStringCharacter>.size
@@ -31,12 +31,12 @@ extension Data {
         return String(characters)
     }
     
-    func ptpArrayCapacity(from offset: Int = 0, each elementCapacity: Int ) -> Int {
+    public func ptpArrayCapacity(from offset: Int = 0, each elementCapacity: Int ) -> Int {
         let count: PTPArrayElementsCount = self.subdata(in: offset..<(offset + MemoryLayout<PTPArrayElementsCount>.size)).withUnsafeBytes({$0.pointee})
         return MemoryLayout<PTPArrayElementsCount>.size + (Int(count) * elementCapacity)
     }
     
-    func ptpArray<T>(from offset: Int = 0) -> [T] {
+    public func ptpArray<T>(from offset: Int = 0) -> [T] {
         let countCapacity = MemoryLayout<PTPArrayElementsCount>.size
         let count: PTPArrayElementsCount = self.subdata(in: offset..<(offset + countCapacity)).withUnsafeBytes({$0.pointee})
         let elementCapacity = MemoryLayout<T>.size
@@ -54,50 +54,50 @@ extension Data {
     }
 }
 
-struct GetDeviceInfoDataSet: PTPDataSet, CustomStringConvertible {
-    typealias StandardVersion = UInt16
-    let standardVersion: StandardVersion
+public struct GetDeviceInfoDataSet: PTPDataSet, CustomStringConvertible {
+    public typealias StandardVersion = UInt16
+    public let standardVersion: StandardVersion
     
-    typealias VendorExtensionID = UInt32
-    let vendorExtensionID: VendorExtensionID
+    public typealias VendorExtensionID = UInt32
+    public let vendorExtensionID: VendorExtensionID
     
-    typealias VendorExtensionVersion = UInt16
-    let vendorExtensionVersion: VendorExtensionVersion
+    public typealias VendorExtensionVersion = UInt16
+    public let vendorExtensionVersion: VendorExtensionVersion
     
-    typealias VendorExtensionDesc = String
-    let vendorExtensionDesc: VendorExtensionDesc
+    public typealias VendorExtensionDesc = String
+    public let vendorExtensionDesc: VendorExtensionDesc
     
-    typealias FunctionalMode = UInt16
-    let functionalMode: FunctionalMode
+    public typealias FunctionalMode = UInt16
+    public let functionalMode: FunctionalMode
     
-    typealias OperationsSupported = [UInt16]
-    let operationsSupported: OperationsSupported
+    public typealias OperationsSupported = [UInt16]
+    public let operationsSupported: OperationsSupported
     
-    typealias EventsSupported = [UInt16]
-    let eventsSupported: EventsSupported
+    public typealias EventsSupported = [UInt16]
+    public let eventsSupported: EventsSupported
     
-    typealias DevicePropertiesSupported = [UInt16]
-    let devicePropertiesSupported: DevicePropertiesSupported
+    public typealias DevicePropertiesSupported = [UInt16]
+    public let devicePropertiesSupported: DevicePropertiesSupported
     
-    typealias CaptureFormats = [UInt16]
-    let captureFormats: CaptureFormats
+    public typealias CaptureFormats = [UInt16]
+    public let captureFormats: CaptureFormats
  
-    typealias ImageFormats = [UInt16]
-    let imageFormats: ImageFormats
+    public typealias ImageFormats = [UInt16]
+    public let imageFormats: ImageFormats
     
-    typealias Manufacturer = String
-    let manufacturer: Manufacturer
+    public typealias Manufacturer = String
+    public let manufacturer: Manufacturer
     
-    typealias Model = String
-    let model: Model
+    public typealias Model = String
+    public let model: Model
     
-    typealias DeviceVersion = String
-    let deviceVersion: DeviceVersion
+    public typealias DeviceVersion = String
+    public let deviceVersion: DeviceVersion
 
-    typealias SerialNumber = String
-    let serialNumber: SerialNumber
+    public typealias SerialNumber = String
+    public let serialNumber: SerialNumber
 
-    init?(data: Data) {
+    public init?(data: Data) {
         var offset: Int = 0
         var capacity: Int = 0
         
@@ -158,8 +158,9 @@ struct GetDeviceInfoDataSet: PTPDataSet, CustomStringConvertible {
         offset += capacity
     }
     
-    var description: String {
+    public var description: String {
         let descriptions: [String] = [
+            "data set \"get deice info\"",
             "           standard version: \(self.standardVersion)",
             "        vendor extension id: \(self.vendorExtensionID)",
             "   vendor extension version: \(self.vendorExtensionVersion)",
@@ -176,6 +177,6 @@ struct GetDeviceInfoDataSet: PTPDataSet, CustomStringConvertible {
             "              serial number: \(self.serialNumber)",
             
         ]
-        return descriptions.reduce("", {return ($0 + "\n" + $1)})
+        return descriptions.joined(separator: "\n")
     }
 }

@@ -1,7 +1,7 @@
 
 import Foundation
 
-enum PTPResponseCode: PTPCode {
+public enum PTPResponseCode: PTPCode {
     case undefined                             = 0x2000
     case ok                                    = 0x2001
     case generalError                          = 0x2002
@@ -37,10 +37,10 @@ enum PTPResponseCode: PTPCode {
     case specificationOfDestinationUnsupported = 0x2020
 }
 
-struct PTPOperationResponse {
-    let container: PTPContainer
+public struct PTPOperationResponse {
+    public let container: PTPContainer
         
-    init?(data: Data) {
+    public init?(data: Data) {
         guard let container = PTPContainer(type: PTPContainerType.response.rawValue, data: data) else {
             return nil
         }

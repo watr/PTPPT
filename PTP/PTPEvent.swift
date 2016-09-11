@@ -1,7 +1,7 @@
 
 import Foundation
 
-enum PTPEventCode: PTPCode {
+public enum PTPEventCode: PTPCode {
     case undefined                     = 0x4000
     case cancelTransaction             = 0x4001
     case objectAdded                   = 0x4002
@@ -22,10 +22,10 @@ enum PTPEventCode: PTPCode {
     case appleUserAssignedNameChanged  = 0xC002
 }
 
-struct PTPEvent {
-    let container: PTPContainer
+public struct PTPEvent {
+    public let container: PTPContainer
     
-    init?(data: Data) {
+    public init?(data: Data) {
         guard let container = PTPContainer(type: PTPContainerType.event.rawValue, data: data) else {
             return nil
         }

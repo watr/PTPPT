@@ -1,6 +1,7 @@
 
 import Cocoa
 import ImageCaptureCore
+import PTPPT
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, ICDeviceBrowserDelegate, ICCameraDeviceDelegate {
@@ -49,7 +50,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, ICDeviceBrowserDelegate, ICC
     
     func deviceDidBecomeReady(_ device: ICDevice) {
         print("device did become ready")
-        print()
         
         if let cameraDevice = device as? ICCameraDevice{
             let operation = PTPOperation(code: PTPOperationCode.getDeviceInfo.rawValue, parameters: [])

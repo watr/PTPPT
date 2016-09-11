@@ -1,7 +1,7 @@
 
 import Foundation
 
-enum PTPOperationCode : PTPCode {
+public enum PTPOperationCode : PTPCode {
     case undefined                   = 0x1000
     case getDeviceInfo               = 0x1001
     case openSession                 = 0x1002
@@ -37,14 +37,14 @@ enum PTPOperationCode : PTPCode {
     case getUserAssignedDeviceName   = 0x9003
 }
 
-struct PTPOperation {
-    let container: PTPContainer
+public struct PTPOperation {
+    public let container: PTPContainer
     
-    init(code: PTPCode, parameters: [PTPParameter]) {
+    public init(code: PTPCode, parameters: [PTPParameter]) {
         self.container = PTPContainer(code: code, parameters: parameters)
     }
         
-    var commandBuffer: Data {
+    public var commandBuffer: Data {
         let length = ((MemoryLayout<PTPContainerDataLength>.size + MemoryLayout<PTPContainerTypeRawValue>.size + MemoryLayout<PTPCode>.size + MemoryLayout<PTPTransactionID>.size) + (MemoryLayout<PTPParameter>.size * Int(self.container.numberOfParameters)))
         var bytes = [UInt8](repeating: 0, count: length)
         

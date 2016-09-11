@@ -1,20 +1,20 @@
 
 import Foundation
 
-typealias PTPContainerDataLength   = UInt32
-typealias PTPContainerTypeRawValue = UInt16
-typealias PTPTransactionID         = UInt32
+public typealias PTPContainerDataLength   = UInt32
+public typealias PTPContainerTypeRawValue = UInt16
+public typealias PTPTransactionID         = UInt32
 
-typealias PTPCode                  = UInt16
-typealias PTPParameter             = UInt32
-typealias PTPNumberOfParameters    = UInt16
+public typealias PTPCode                  = UInt16
+public typealias PTPParameter             = UInt32
+public typealias PTPNumberOfParameters    = UInt16
 
-typealias PTPStringCharacterCount  = UInt8
-typealias PTPStringCharacter       = UniChar
+public typealias PTPStringCharacterCount  = UInt8
+public typealias PTPStringCharacter       = UniChar
 
-typealias PTPArrayElementsCount    = UInt32
+public typealias PTPArrayElementsCount    = UInt32
 
-enum PTPContainerType: PTPContainerTypeRawValue {
+public enum PTPContainerType: PTPContainerTypeRawValue {
     case undefined = 0
     case command   = 1
     case data      = 2
@@ -22,24 +22,24 @@ enum PTPContainerType: PTPContainerTypeRawValue {
     case event     = 4
 }
 
-struct PTPContainer {
-    let type: PTPContainerTypeRawValue
-    let code: PTPCode
-    let transactionID: PTPTransactionID
-    let parameters: [PTPParameter]
+public struct PTPContainer {
+    public let type: PTPContainerTypeRawValue
+    public let code: PTPCode
+    public let transactionID: PTPTransactionID
+    public let parameters: [PTPParameter]
     
-    var numberOfParameters: PTPNumberOfParameters {
+    public var numberOfParameters: PTPNumberOfParameters {
         return PTPNumberOfParameters(self.parameters.count)
     }
     
-    init(type: PTPContainerTypeRawValue = PTPContainerType.undefined.rawValue, code: PTPCode, transactionID: PTPTransactionID = 0, parameters: [PTPParameter]) {
+    public init(type: PTPContainerTypeRawValue = PTPContainerType.undefined.rawValue, code: PTPCode, transactionID: PTPTransactionID = 0, parameters: [PTPParameter]) {
         self.type = type
         self.code = code
         self.transactionID = transactionID
         self.parameters = parameters
     }
         
-    init?(type specify: PTPContainerTypeRawValue? = nil, data: Data) {
+    public init?(type specify: PTPContainerTypeRawValue? = nil, data: Data) {
         var offset: Int = 0
         var capacity: Int = 0
         

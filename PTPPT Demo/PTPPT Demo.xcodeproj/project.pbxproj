@@ -13,13 +13,7 @@
 		2F5DCAD81D84FBCA003C91BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F5DCAD61D84FBCA003C91BB /* Main.storyboard */; };
 		2F5DCAE31D84FBCA003C91BB /* PTPPT_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCAE21D84FBCA003C91BB /* PTPPT_DemoTests.swift */; };
 		2F5DCAEE1D84FBCA003C91BB /* PTPPT_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCAED1D84FBCA003C91BB /* PTPPT_DemoUITests.swift */; };
-		2F5DCB121D85004D003C91BB /* PTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB0B1D85004D003C91BB /* PTP.swift */; };
-		2F5DCB131D85004D003C91BB /* PTPDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB0C1D85004D003C91BB /* PTPDataSet.swift */; };
-		2F5DCB141D85004D003C91BB /* PTPDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB0D1D85004D003C91BB /* PTPDescriptor.swift */; };
-		2F5DCB151D85004D003C91BB /* PTPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB0E1D85004D003C91BB /* PTPEvent.swift */; };
-		2F5DCB161D85004D003C91BB /* PTPOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB0F1D85004D003C91BB /* PTPOperation.swift */; };
-		2F5DCB171D85004D003C91BB /* PTPOperationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB101D85004D003C91BB /* PTPOperationRequest.swift */; };
-		2F5DCB181D85004D003C91BB /* PTPOperationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB111D85004D003C91BB /* PTPOperationResponse.swift */; };
+		2F5DCB4B1D8595A8003C91BB /* PTPPT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5DCB4A1D8595A8003C91BB /* PTPPT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +46,7 @@
 		2F5DCAE91D84FBCA003C91BB /* PTPPT DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PTPPT DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5DCAED1D84FBCA003C91BB /* PTPPT_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTPPT_DemoUITests.swift; sourceTree = "<group>"; };
 		2F5DCAEF1D84FBCA003C91BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F5DCB0B1D85004D003C91BB /* PTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTP.swift; sourceTree = "<group>"; };
-		2F5DCB0C1D85004D003C91BB /* PTPDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPDataSet.swift; sourceTree = "<group>"; };
-		2F5DCB0D1D85004D003C91BB /* PTPDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPDescriptor.swift; sourceTree = "<group>"; };
-		2F5DCB0E1D85004D003C91BB /* PTPEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPEvent.swift; sourceTree = "<group>"; };
-		2F5DCB0F1D85004D003C91BB /* PTPOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPOperation.swift; sourceTree = "<group>"; };
-		2F5DCB101D85004D003C91BB /* PTPOperationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPOperationRequest.swift; sourceTree = "<group>"; };
-		2F5DCB111D85004D003C91BB /* PTPOperationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPOperationResponse.swift; sourceTree = "<group>"; };
+		2F5DCB4A1D8595A8003C91BB /* PTPPT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PTPPT.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/PTPPT-ambpkzntmsbfxqbsaktzegzypanj/Build/Products/Debug/PTPPT.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5DCB4B1D8595A8003C91BB /* PTPPT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,11 +78,11 @@
 		2F5DCAC41D84FBCA003C91BB = {
 			isa = PBXGroup;
 			children = (
-				2F5DCB0A1D85004D003C91BB /* PTP */,
 				2F5DCACF1D84FBCA003C91BB /* PTPPT Demo */,
 				2F5DCAE11D84FBCA003C91BB /* PTPPT DemoTests */,
 				2F5DCAEC1D84FBCA003C91BB /* PTPPT DemoUITests */,
 				2F5DCACE1D84FBCA003C91BB /* Products */,
+				2F5DCB491D8595A8003C91BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,19 +126,12 @@
 			path = "PTPPT DemoUITests";
 			sourceTree = "<group>";
 		};
-		2F5DCB0A1D85004D003C91BB /* PTP */ = {
+		2F5DCB491D8595A8003C91BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2F5DCB0B1D85004D003C91BB /* PTP.swift */,
-				2F5DCB0C1D85004D003C91BB /* PTPDataSet.swift */,
-				2F5DCB0D1D85004D003C91BB /* PTPDescriptor.swift */,
-				2F5DCB0E1D85004D003C91BB /* PTPEvent.swift */,
-				2F5DCB0F1D85004D003C91BB /* PTPOperation.swift */,
-				2F5DCB101D85004D003C91BB /* PTPOperationRequest.swift */,
-				2F5DCB111D85004D003C91BB /* PTPOperationResponse.swift */,
+				2F5DCB4A1D8595A8003C91BB /* PTPPT.framework */,
 			);
-			name = PTP;
-			path = ../PTP;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,15 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F5DCB141D85004D003C91BB /* PTPDescriptor.swift in Sources */,
 				2F5DCAD31D84FBCA003C91BB /* ViewController.swift in Sources */,
-				2F5DCB171D85004D003C91BB /* PTPOperationRequest.swift in Sources */,
-				2F5DCB131D85004D003C91BB /* PTPDataSet.swift in Sources */,
-				2F5DCB121D85004D003C91BB /* PTP.swift in Sources */,
-				2F5DCB161D85004D003C91BB /* PTPOperation.swift in Sources */,
-				2F5DCB181D85004D003C91BB /* PTPOperationResponse.swift in Sources */,
 				2F5DCAD11D84FBCA003C91BB /* AppDelegate.swift in Sources */,
-				2F5DCB151D85004D003C91BB /* PTPEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +517,7 @@
 				2F5DCAF41D84FBCA003C91BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F5DCAF51D84FBCA003C91BB /* Build configuration list for PBXNativeTarget "PTPPT DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +526,7 @@
 				2F5DCAF71D84FBCA003C91BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F5DCAF81D84FBCA003C91BB /* Build configuration list for PBXNativeTarget "PTPPT DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +535,7 @@
 				2F5DCAFA1D84FBCA003C91BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
