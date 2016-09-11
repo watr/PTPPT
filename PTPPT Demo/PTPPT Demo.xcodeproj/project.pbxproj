@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F5DCAD11D84FBCA003C91BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCAD01D84FBCA003C91BB /* AppDelegate.swift */; };
+		2F5DCAD31D84FBCA003C91BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCAD21D84FBCA003C91BB /* ViewController.swift */; };
+		2F5DCAD51D84FBCA003C91BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F5DCAD41D84FBCA003C91BB /* Assets.xcassets */; };
+		2F5DCAD81D84FBCA003C91BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F5DCAD61D84FBCA003C91BB /* Main.storyboard */; };
+		2F5DCAE31D84FBCA003C91BB /* PTPPT_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCAE21D84FBCA003C91BB /* PTPPT_DemoTests.swift */; };
+		2F5DCAEE1D84FBCA003C91BB /* PTPPT_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCAED1D84FBCA003C91BB /* PTPPT_DemoUITests.swift */; };
+		2F5DCB121D85004D003C91BB /* PTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB0B1D85004D003C91BB /* PTP.swift */; };
+		2F5DCB131D85004D003C91BB /* PTPDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB0C1D85004D003C91BB /* PTPDataSet.swift */; };
+		2F5DCB141D85004D003C91BB /* PTPDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB0D1D85004D003C91BB /* PTPDescriptor.swift */; };
+		2F5DCB151D85004D003C91BB /* PTPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB0E1D85004D003C91BB /* PTPEvent.swift */; };
+		2F5DCB161D85004D003C91BB /* PTPOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB0F1D85004D003C91BB /* PTPOperation.swift */; };
+		2F5DCB171D85004D003C91BB /* PTPOperationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB101D85004D003C91BB /* PTPOperationRequest.swift */; };
+		2F5DCB181D85004D003C91BB /* PTPOperationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DCB111D85004D003C91BB /* PTPOperationResponse.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F5DCADF1D84FBCA003C91BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F5DCAC51D84FBCA003C91BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F5DCACC1D84FBCA003C91BB;
+			remoteInfo = "PTPPT Demo";
+		};
+		2F5DCAEA1D84FBCA003C91BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F5DCAC51D84FBCA003C91BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F5DCACC1D84FBCA003C91BB;
+			remoteInfo = "PTPPT Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F5DCACD1D84FBCA003C91BB /* PTPPT Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTPPT Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F5DCAD01D84FBCA003C91BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F5DCAD21D84FBCA003C91BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F5DCAD41D84FBCA003C91BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F5DCAD71D84FBCA003C91BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2F5DCAD91D84FBCA003C91BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F5DCADE1D84FBCA003C91BB /* PTPPT DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PTPPT DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F5DCAE21D84FBCA003C91BB /* PTPPT_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTPPT_DemoTests.swift; sourceTree = "<group>"; };
+		2F5DCAE41D84FBCA003C91BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F5DCAE91D84FBCA003C91BB /* PTPPT DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PTPPT DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F5DCAED1D84FBCA003C91BB /* PTPPT_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTPPT_DemoUITests.swift; sourceTree = "<group>"; };
+		2F5DCAEF1D84FBCA003C91BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F5DCB0B1D85004D003C91BB /* PTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTP.swift; sourceTree = "<group>"; };
+		2F5DCB0C1D85004D003C91BB /* PTPDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPDataSet.swift; sourceTree = "<group>"; };
+		2F5DCB0D1D85004D003C91BB /* PTPDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPDescriptor.swift; sourceTree = "<group>"; };
+		2F5DCB0E1D85004D003C91BB /* PTPEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPEvent.swift; sourceTree = "<group>"; };
+		2F5DCB0F1D85004D003C91BB /* PTPOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPOperation.swift; sourceTree = "<group>"; };
+		2F5DCB101D85004D003C91BB /* PTPOperationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPOperationRequest.swift; sourceTree = "<group>"; };
+		2F5DCB111D85004D003C91BB /* PTPOperationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTPOperationResponse.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F5DCACA1D84FBCA003C91BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F5DCADB1D84FBCA003C91BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F5DCAE61D84FBCA003C91BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F5DCAC41D84FBCA003C91BB = {
+			isa = PBXGroup;
+			children = (
+				2F5DCB0A1D85004D003C91BB /* PTP */,
+				2F5DCACF1D84FBCA003C91BB /* PTPPT Demo */,
+				2F5DCAE11D84FBCA003C91BB /* PTPPT DemoTests */,
+				2F5DCAEC1D84FBCA003C91BB /* PTPPT DemoUITests */,
+				2F5DCACE1D84FBCA003C91BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F5DCACE1D84FBCA003C91BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F5DCACD1D84FBCA003C91BB /* PTPPT Demo.app */,
+				2F5DCADE1D84FBCA003C91BB /* PTPPT DemoTests.xctest */,
+				2F5DCAE91D84FBCA003C91BB /* PTPPT DemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F5DCACF1D84FBCA003C91BB /* PTPPT Demo */ = {
+			isa = PBXGroup;
+			children = (
+				2F5DCAD01D84FBCA003C91BB /* AppDelegate.swift */,
+				2F5DCAD21D84FBCA003C91BB /* ViewController.swift */,
+				2F5DCAD41D84FBCA003C91BB /* Assets.xcassets */,
+				2F5DCAD61D84FBCA003C91BB /* Main.storyboard */,
+				2F5DCAD91D84FBCA003C91BB /* Info.plist */,
+			);
+			path = "PTPPT Demo";
+			sourceTree = "<group>";
+		};
+		2F5DCAE11D84FBCA003C91BB /* PTPPT DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F5DCAE21D84FBCA003C91BB /* PTPPT_DemoTests.swift */,
+				2F5DCAE41D84FBCA003C91BB /* Info.plist */,
+			);
+			path = "PTPPT DemoTests";
+			sourceTree = "<group>";
+		};
+		2F5DCAEC1D84FBCA003C91BB /* PTPPT DemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F5DCAED1D84FBCA003C91BB /* PTPPT_DemoUITests.swift */,
+				2F5DCAEF1D84FBCA003C91BB /* Info.plist */,
+			);
+			path = "PTPPT DemoUITests";
+			sourceTree = "<group>";
+		};
+		2F5DCB0A1D85004D003C91BB /* PTP */ = {
+			isa = PBXGroup;
+			children = (
+				2F5DCB0B1D85004D003C91BB /* PTP.swift */,
+				2F5DCB0C1D85004D003C91BB /* PTPDataSet.swift */,
+				2F5DCB0D1D85004D003C91BB /* PTPDescriptor.swift */,
+				2F5DCB0E1D85004D003C91BB /* PTPEvent.swift */,
+				2F5DCB0F1D85004D003C91BB /* PTPOperation.swift */,
+				2F5DCB101D85004D003C91BB /* PTPOperationRequest.swift */,
+				2F5DCB111D85004D003C91BB /* PTPOperationResponse.swift */,
+			);
+			name = PTP;
+			path = ../PTP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F5DCACC1D84FBCA003C91BB /* PTPPT Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F5DCAF21D84FBCA003C91BB /* Build configuration list for PBXNativeTarget "PTPPT Demo" */;
+			buildPhases = (
+				2F5DCAC91D84FBCA003C91BB /* Sources */,
+				2F5DCACA1D84FBCA003C91BB /* Frameworks */,
+				2F5DCACB1D84FBCA003C91BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PTPPT Demo";
+			productName = "PTPPT Demo";
+			productReference = 2F5DCACD1D84FBCA003C91BB /* PTPPT Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F5DCADD1D84FBCA003C91BB /* PTPPT DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F5DCAF51D84FBCA003C91BB /* Build configuration list for PBXNativeTarget "PTPPT DemoTests" */;
+			buildPhases = (
+				2F5DCADA1D84FBCA003C91BB /* Sources */,
+				2F5DCADB1D84FBCA003C91BB /* Frameworks */,
+				2F5DCADC1D84FBCA003C91BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F5DCAE01D84FBCA003C91BB /* PBXTargetDependency */,
+			);
+			name = "PTPPT DemoTests";
+			productName = "PTPPT DemoTests";
+			productReference = 2F5DCADE1D84FBCA003C91BB /* PTPPT DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2F5DCAE81D84FBCA003C91BB /* PTPPT DemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F5DCAF81D84FBCA003C91BB /* Build configuration list for PBXNativeTarget "PTPPT DemoUITests" */;
+			buildPhases = (
+				2F5DCAE51D84FBCA003C91BB /* Sources */,
+				2F5DCAE61D84FBCA003C91BB /* Frameworks */,
+				2F5DCAE71D84FBCA003C91BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F5DCAEB1D84FBCA003C91BB /* PBXTargetDependency */,
+			);
+			name = "PTPPT DemoUITests";
+			productName = "PTPPT DemoUITests";
+			productReference = 2F5DCAE91D84FBCA003C91BB /* PTPPT DemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F5DCAC51D84FBCA003C91BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "HASHIMOTO Wataru";
+				TargetAttributes = {
+					2F5DCACC1D84FBCA003C91BB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = S8S4FU6F42;
+						ProvisioningStyle = Automatic;
+					};
+					2F5DCADD1D84FBCA003C91BB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = S8S4FU6F42;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2F5DCACC1D84FBCA003C91BB;
+					};
+					2F5DCAE81D84FBCA003C91BB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = S8S4FU6F42;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2F5DCACC1D84FBCA003C91BB;
+					};
+				};
+			};
+			buildConfigurationList = 2F5DCAC81D84FBCA003C91BB /* Build configuration list for PBXProject "PTPPT Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F5DCAC41D84FBCA003C91BB;
+			productRefGroup = 2F5DCACE1D84FBCA003C91BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F5DCACC1D84FBCA003C91BB /* PTPPT Demo */,
+				2F5DCADD1D84FBCA003C91BB /* PTPPT DemoTests */,
+				2F5DCAE81D84FBCA003C91BB /* PTPPT DemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F5DCACB1D84FBCA003C91BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F5DCAD51D84FBCA003C91BB /* Assets.xcassets in Resources */,
+				2F5DCAD81D84FBCA003C91BB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F5DCADC1D84FBCA003C91BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F5DCAE71D84FBCA003C91BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F5DCAC91D84FBCA003C91BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F5DCB141D85004D003C91BB /* PTPDescriptor.swift in Sources */,
+				2F5DCAD31D84FBCA003C91BB /* ViewController.swift in Sources */,
+				2F5DCB171D85004D003C91BB /* PTPOperationRequest.swift in Sources */,
+				2F5DCB131D85004D003C91BB /* PTPDataSet.swift in Sources */,
+				2F5DCB121D85004D003C91BB /* PTP.swift in Sources */,
+				2F5DCB161D85004D003C91BB /* PTPOperation.swift in Sources */,
+				2F5DCB181D85004D003C91BB /* PTPOperationResponse.swift in Sources */,
+				2F5DCAD11D84FBCA003C91BB /* AppDelegate.swift in Sources */,
+				2F5DCB151D85004D003C91BB /* PTPEvent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F5DCADA1D84FBCA003C91BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F5DCAE31D84FBCA003C91BB /* PTPPT_DemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F5DCAE51D84FBCA003C91BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F5DCAEE1D84FBCA003C91BB /* PTPPT_DemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F5DCAE01D84FBCA003C91BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F5DCACC1D84FBCA003C91BB /* PTPPT Demo */;
+			targetProxy = 2F5DCADF1D84FBCA003C91BB /* PBXContainerItemProxy */;
+		};
+		2F5DCAEB1D84FBCA003C91BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F5DCACC1D84FBCA003C91BB /* PTPPT Demo */;
+			targetProxy = 2F5DCAEA1D84FBCA003C91BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2F5DCAD61D84FBCA003C91BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F5DCAD71D84FBCA003C91BB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F5DCAF01D84FBCA003C91BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F5DCAF11D84FBCA003C91BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		2F5DCAF31D84FBCA003C91BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S8S4FU6F42;
+				INFOPLIST_FILE = "PTPPT Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.wataruhash.PTPPT-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2F5DCAF41D84FBCA003C91BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S8S4FU6F42;
+				INFOPLIST_FILE = "PTPPT Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.wataruhash.PTPPT-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2F5DCAF61D84FBCA003C91BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S8S4FU6F42;
+				INFOPLIST_FILE = "PTPPT DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.wataruhash.PTPPT-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PTPPT Demo.app/Contents/MacOS/PTPPT Demo";
+			};
+			name = Debug;
+		};
+		2F5DCAF71D84FBCA003C91BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S8S4FU6F42;
+				INFOPLIST_FILE = "PTPPT DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.wataruhash.PTPPT-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PTPPT Demo.app/Contents/MacOS/PTPPT Demo";
+			};
+			name = Release;
+		};
+		2F5DCAF91D84FBCA003C91BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S8S4FU6F42;
+				INFOPLIST_FILE = "PTPPT DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.wataruhash.PTPPT-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "PTPPT Demo";
+			};
+			name = Debug;
+		};
+		2F5DCAFA1D84FBCA003C91BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S8S4FU6F42;
+				INFOPLIST_FILE = "PTPPT DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.wataruhash.PTPPT-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "PTPPT Demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F5DCAC81D84FBCA003C91BB /* Build configuration list for PBXProject "PTPPT Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F5DCAF01D84FBCA003C91BB /* Debug */,
+				2F5DCAF11D84FBCA003C91BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F5DCAF21D84FBCA003C91BB /* Build configuration list for PBXNativeTarget "PTPPT Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F5DCAF31D84FBCA003C91BB /* Debug */,
+				2F5DCAF41D84FBCA003C91BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2F5DCAF51D84FBCA003C91BB /* Build configuration list for PBXNativeTarget "PTPPT DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F5DCAF61D84FBCA003C91BB /* Debug */,
+				2F5DCAF71D84FBCA003C91BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2F5DCAF81D84FBCA003C91BB /* Build configuration list for PBXNativeTarget "PTPPT DemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F5DCAF91D84FBCA003C91BB /* Debug */,
+				2F5DCAFA1D84FBCA003C91BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F5DCAC51D84FBCA003C91BB /* Project object */;
+}
