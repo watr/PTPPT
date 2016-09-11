@@ -32,7 +32,7 @@ struct PTPEvent {
     }
     
     init?(data: Data) {
-        guard let container = PTPContainer(type: .event, data: data) else {
+        guard let container = PTPContainer(type: PTPContainerType.event.rawValue, data: data) else {
             return nil
         }
         self.container = container

@@ -51,7 +51,7 @@ struct PTPOperation {
     }
     
     var commandBuffer: Data {
-        let length = ((MemoryLayout<PTPContainerDataLength>.size + MemoryLayout<PTPContainerType_>.size + MemoryLayout<PTPCode>.size + MemoryLayout<PTPTransactionID>.size) + (MemoryLayout<PTPParameter>.size * Int(self.container.numberOfParameters)))
+        let length = ((MemoryLayout<PTPContainerDataLength>.size + MemoryLayout<PTPContainerTypeRawValue>.size + MemoryLayout<PTPCode>.size + MemoryLayout<PTPTransactionID>.size) + (MemoryLayout<PTPParameter>.size * Int(self.container.numberOfParameters)))
         var bytes = [UInt8](repeating: 0, count: length)
         
         bytes.withUnsafeMutableBufferPointer { (buffer) in
@@ -61,8 +61,8 @@ struct PTPOperation {
             rawPointer.storeBytes(of: PTPContainerDataLength(length), toByteOffset: byteOffset, as: PTPContainerDataLength.self)
             byteOffset += MemoryLayout<PTPContainerDataLength>.size
             
-            rawPointer.storeBytes(of: PTPContainerType_(PTPContainerType.command.rawValue), toByteOffset: byteOffset, as: PTPContainerType_.self)
-            byteOffset += MemoryLayout<PTPContainerType_>.size
+            rawPointer.storeBytes(of: PTPContainerTypeRawValue(PTPContainerType.command.rawValue), toByteOffset: byteOffset, as: PTPContainerTypeRawValue.self)
+            byteOffset += MemoryLayout<PTPContainerTypeRawValue>.size
 
             rawPointer.storeBytes(of: self.container.code, toByteOffset: byteOffset, as: PTPCode.self)
             byteOffset += MemoryLayout<PTPCode>.size

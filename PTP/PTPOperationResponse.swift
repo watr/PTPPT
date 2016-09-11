@@ -47,7 +47,7 @@ struct PTPOperationResponse {
     }
     
     init?(data: Data) {
-        guard let container = PTPContainer(type: .response, data: data) else {
+        guard let container = PTPContainer(type: PTPContainerType.response.rawValue, data: data) else {
             return nil
         }
         self.container = container
