@@ -7,7 +7,7 @@ class PTPOperationRequest: NSObject {
     
     let operation: PTPOperation
     let outData: Data
-    let completionHandler: PTPOperationCompletionHandler?
+    var completionHandler: PTPOperationCompletionHandler?
     
     init(operation: PTPOperation, outData: Data, completionHandler: PTPOperationCompletionHandler?) {
         self.operation = operation
