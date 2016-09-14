@@ -131,3 +131,24 @@ public struct GetDeviceInfoDataSet: PTPDataSet, CustomStringConvertible {
         return descriptions.joined(separator: "\n")
     }
 }
+
+public struct GetStorageIDsDataSet: PTPDataSet, CustomStringConvertible {
+    public let storageIDs: [UInt32]
+    
+    public init?(data: Data) {
+        var offset: Int = 0
+        var capacity: Int = 0
+        
+        capacity = data.ptpArrayCapacity(from: offset, each: MemoryLayout<UInt32>.size)
+        self.storageIDs = data.ptpArray()
+        offset += capacity
+    }
+    
+    public var description: String {
+        let descriptions: [String] = [
+            "data set \"get storage IDs\"",
+            "storage IDs: \(self.storageIDs.map({String(format: "0x%x", $0)}).joined(separator: ", "))",
+        ]
+        return descriptions.joined(separator: "\n")
+    }
+}

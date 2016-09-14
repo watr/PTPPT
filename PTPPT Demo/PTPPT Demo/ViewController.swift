@@ -6,6 +6,7 @@ import PTPPT
 class ViewController: NSViewController, ICDeviceBrowserDelegate, ICCameraDeviceDelegate {
     var cameraBrowser: ICDeviceBrowser?
     var requests: [PTPOperationRequest] = []
+    var cameraStorageIDs: Dictionary<ICCameraDevice, [UInt32]> = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,19 @@ class ViewController: NSViewController, ICDeviceBrowserDelegate, ICCameraDeviceD
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    func getStorageIDs(camera cameraDevice: ICCameraDevice) {
+        let operation = PTPOperation(code: PTPOperationCode.getStorageIDs.rawValue, parameters: [])
+        let request = PTPOperationRequest(operation: operation, outData: Data(), completionHandler: { (_, inData, response, error) in
+            if response.container.code == PTPResponseCode.ok.rawValue {
+                let storageIDsDataSet = GetStorageIDsDataSet(data: inData)!
+                print("\(storageIDsDataSet)")
+                self.cameraStorageIDs[cameraDevice] = storageIDsDataSet.storageIDs
+            }
+        })
+        self.requests.append(request)
+        request.send(to: cameraDevice)
     }
     
     //MARK: ICDeviceBrowserDelegate
@@ -51,6 +65,7 @@ class ViewController: NSViewController, ICDeviceBrowserDelegate, ICCameraDeviceD
     
     func deviceDidBecomeReady(_ device: ICDevice) {
         print("device did become ready")
+        print("session opened? \(device.hasOpenSession)")
         
         if let cameraDevice = device as? ICCameraDevice{
             print("can accept ptp commands?: \(cameraDevice.canAcceptPTPCommands)")
@@ -58,6 +73,7 @@ class ViewController: NSViewController, ICDeviceBrowserDelegate, ICCameraDeviceD
             let request = PTPOperationRequest(operation: operation, outData: Data(), completionHandler: { (_, inData, response, error) in
                 if response.container.code == PTPResponseCode.ok.rawValue {
                     print(GetDeviceInfoDataSet(data: inData)!)
+                    self.getStorageIDs(camera: cameraDevice)
                 }
             })
             self.requests.append(request)
