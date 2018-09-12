@@ -21,7 +21,7 @@ public class PTPOperationRequest: NSObject {
     
     // private callback function
     // you should never directly invoke this method
-    internal func didSendPTPCommand(command: NSData, inData: NSData, response: NSData, error: NSError, contextInfo: UnsafeMutableRawPointer?) {
+    @objc internal func didSendPTPCommand(command: NSData, inData: NSData, response: NSData, error: NSError, contextInfo: UnsafeMutableRawPointer?) {
         if let completionHandler = self.completionHandler {
             completionHandler(self.operation, Data(referencing: inData), PTPOperationResponse(data: Data(referencing: response))!, error)
         }
